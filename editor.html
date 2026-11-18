@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Conversation Card Studio</title><link rel="stylesheet" href="editor.css"></head>
+<body><div class="overlay"><main class="editor" role="dialog" aria-modal="true" aria-labelledby="editor-title">
+  <header class="top"><div><span class="eyebrow">CONVERSATION CARD STUDIO</span><h1 id="editor-title">Make your conversation shareable</h1></div><button id="close" class="close" aria-label="Close editor">×</button></header>
+  <div class="workspace"><section class="preview"><div class="section-head"><div><strong>Live preview</strong><span>Click the text to edit. Select text to redact it.</span></div><span class="badge">HIGH-RES PNG</span></div><div class="preview-scroll"><div id="artboard" class="artboard"><article id="card" class="card"><div class="card-brand"><span class="mark">✳</span><span>CHATGPT <b> / </b> CONVERSATION</span><span class="card-number">01</span></div><div id="card-title" class="card-title"></div><div class="divider"></div><div id="question-block"><div class="label">QUESTION</div><div id="question" class="question" contenteditable="true" role="textbox" aria-label="Edit question" aria-multiline="true"></div></div><div class="answer-block"><div class="label"><span class="accent-dot"></span> RESPONSE</div><div id="answer" class="answer" contenteditable="true" role="textbox" aria-label="Edit response" aria-multiline="true"></div></div><footer id="signature" class="signature"></footer></article></div></div></section>
+  <aside class="settings"><div class="settings-title"><strong>Make it yours</strong><span>Choose a style and refine the details</span></div>
+    <label>Content <select id="scope"><option value="full">Full response</option><option value="selected" disabled>Selected excerpt</option></select></label>
+    <label class="check"><input id="show-question" type="checkbox" checked> Include question</label>
+    <div class="tools"><button id="redact" type="button">Redact selection</button><button id="reset" type="button">Reset text</button></div>
+    <p class="hint">Select text in the preview, then choose Redact selection. Check your card carefully before sharing.</p>
+    <div id="warnings" class="warnings" role="status"></div>
+    <label>Template<select id="theme"><option value="professional">Professional</option><option value="minimal">Minimal</option><option value="dark">Midnight</option><option value="editorial">Editorial</option><option value="technical">Technical</option></select></label>
+    <label>Canvas size<select id="format"><option value="long">Long form · 900 px wide</option><option value="square">Square · 1:1 minimum</option><option value="portrait">Portrait · 4:5 minimum</option><option value="wide">Landscape · 16:9 minimum</option></select></label>
+    <label>Background color <input id="background" type="color" value="#e5ebf3"></label>
+    <label>Card title <input id="title-input" type="text" maxlength="120" placeholder="Optional title"></label>
+    <label>Text size <span id="font-value">18px</span><input id="font" type="range" min="14" max="24" value="18"></label>
+    <label>Corner radius <span id="radius-value">12px</span><input id="radius" type="range" min="0" max="40" value="12"></label>
+    <label>Signature <input id="author" type="text" maxlength="60" placeholder="Your name or handle"></label>
+    <label>File name <input id="filename" type="text" maxlength="120" value="chatgpt-conversation"></label>
+    <p class="hint">Created locally in your browser. Canvas expands vertically to fit long content.</p><button id="download" class="download">Download PNG <span>↓</span></button><button id="copy" class="secondary" type="button">Copy image</button><p id="status" class="status" role="status"></p>
+  </aside></div></main></div><script src="vendor/html2canvas.min.js"></script><script src="editor.js"></script></body></html>

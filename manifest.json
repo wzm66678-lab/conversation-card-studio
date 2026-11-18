@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Conversation Card Studio",
+  "version": "1.1.0",
+  "description": "Create and download styled images of your ChatGPT conversations.",
+  "action": {
+    "default_title": "Conversation Card Studio",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+    "js": ["content.js"],
+    "css": ["content.css"]
+  }],
+  "web_accessible_resources": [{
+    "resources": ["editor.html", "editor.css", "editor.js", "vendor/html2canvas.min.js"],
+    "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"]
+  }]
+}
