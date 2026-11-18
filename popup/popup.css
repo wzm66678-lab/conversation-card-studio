@@ -1,0 +1,10 @@
+* { box-sizing: border-box; }
+body {
+  width: 280px;
+  margin: 0;
+  padding: 20px;
+  color: #202124;
+  font: 14px/1.5 system-ui, sans-serif;
+}
+h1 { margin: 0 0 8px; font-size: 18px; }
+p { margin: 0 0 14px; }
